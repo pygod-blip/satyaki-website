@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyaki's Complex Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 1rem;
+            padding: 1rem;
+            width: 300px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #333;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-container.left {
+            left: 0;
+        }
+        .timeline-container.right {
+            left: 50%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #333;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-container.right::after {
+            left: -16px;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .gallery img {
+            margin: 5px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Satyaki's World</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about" class="container">
+        <div class="card">
+            <h2>About Satyaki</h2>
+            <p>Satyaki is a multifaceted individual with interests ranging from technology to arts. With a background in computer science, Satyaki has worked on numerous projects that showcase his skills and creativity.</p>
+        </div>
+    </section>
+    <section id="projects" class="container">
+        <div class="card">
+            <h2>Project 1</h2>
+            <p>This project involves developing a web application that helps users manage their tasks efficiently. It includes features like task categorization, reminders, and progress tracking.</p>
+        </div>
+        <div class="card">
+            <h2>Project 2</h2>
+            <p>A mobile app designed to provide real-time weather updates and forecasts. It uses APIs to fetch data and presents it in a user-friendly interface.</p>
+        </div>
+    </section>
+    <section id="blog" class="container">
+        <div class="card">
+            <h2>Blog Post 1</h2>
+            <p>In this blog post, Satyaki shares his thoughts on the latest trends in technology and how they are shaping the future. He discusses the impact of AI, machine learning, and blockchain.</p>
+        </div>
+        <div class="card">
+            <h2>Blog Post 2</h2>
+            <p>This post delves into the world of art and creativity. Satyaki explores different art forms and how they can be integrated with technology to create unique experiences.</p>
+        </div>
+    </section>
+    <section id="timeline" class="timeline">
+        <div class="timeline-container left">
+            <div class="timeline-content">
+                <h2>2000</h2>
+                <p>Satyaki was born in a small town, showing an early interest in technology and arts.</p>
+            </div>
+        </div>
+        <div class="timeline-container right">
+            <div class="timeline-content">
+                <h2>2018</h2>
+                <p>Graduated with a degree in Computer Science and started working on various tech projects.</p>
+            </div>
+        </div>
+        <div class="timeline-container left">
+            <div class="timeline-content">
+                <h2>2020</h2>
+                <p>Developed a popular mobile app that gained significant user traction.</p>
+            </div>
+        </div>
+        <div class="timeline-container right">
+            <div class="timeline-content">
+                <h2>2022</h2>
+                <p>Started a blog to share insights on technology and creativity.</p>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="container gallery">
+        <img src="image1.jpg" alt="Project Image 1">
+        <img src="image2.jpg" alt="Project Image 2">
+        <img src="image3.jpg" alt="Project Image 3">
+        <img src="image4.jpg" alt="Project Image 4">
+    </section>
+    <section id="contact" class="container">
+        <div class="card">
+            <h2>Contact Satyaki</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>© 2024 Satyaki's Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
